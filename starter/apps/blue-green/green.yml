@@ -2,18 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: blue
-  name: blue
+    app: green
+  name: green
   namespace: udacity
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: blue
+      app: green
   template:
     metadata:
       labels:
-        app: blue
+        app: green
     spec:
       containers:
         - name: nginx
@@ -28,16 +28,16 @@ spec:
       volumes:
         - name: configmap-vol
           configMap:
-            name: blue-config
----
+            name: green-config
+--- 
 apiVersion: v1
 kind: Service
 metadata:
-  name: blue-service
+  name: green-service
   namespace: udacity
 spec:
   selector:
-    app: blue
+    app: green
   ports:
     - protocol: TCP
       port: 80        # The port that the service will expose

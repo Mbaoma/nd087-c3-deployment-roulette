@@ -22,12 +22,12 @@ spec:
           ports:
             - containerPort: 9000
               protocol: TCP
-          livenessProbe:
-            httpGet:
-              port: 9000
-              path: /nginx_status
-            initialDelaySeconds: 2
-            periodSeconds: 2
+          # livenessProbe:
+          #   httpGet:
+          #     port: 9000
+          #     path: /nginx_status
+          #   initialDelaySeconds: 2
+          #   periodSeconds: 2
       nodeSelector:
         kubernetes.io/os: linux
       restartPolicy: Always

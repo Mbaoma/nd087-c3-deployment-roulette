@@ -1,0 +1,14 @@
+NAMESPACE     NAME                                     READY   STATUS    RESTARTS         AGE
+kube-system   coredns-76f75df574-tldbg                 1/1     Running   17 (9d ago)      127d
+kube-system   coredns-76f75df574-vx9ln                 1/1     Running   17 (3h13m ago)   127d
+kube-system   etcd-docker-desktop                      1/1     Running   17 (9d ago)      127d
+kube-system   kube-apiserver-docker-desktop            1/1     Running   17 (3h13m ago)   127d
+kube-system   kube-controller-manager-docker-desktop   1/1     Running   17 (9d ago)      127d
+kube-system   kube-proxy-hc7kw                         1/1     Running   17 (9d ago)      127d
+kube-system   kube-scheduler-docker-desktop            1/1     Running   17 (9d ago)      127d
+kube-system   storage-provisioner                      1/1     Running   35 (3h12m ago)   127d
+kube-system   vpnkit-controller                        1/1     Running   17 (9d ago)      127d
+udacity       canary-v1-bdb7f878d-hn4rx                1/1     Running   0                23m
+udacity       canary-v2-755b8b7b9b-dttk9               1/1     Running   0                19m
+udacity       hello-world-78669d56f4-6nmlk             1/1     Running   0                3h1m
+udacity       ops-view-9b8976bb7-5zhjv                 1/1     Running   1 (3h13m ago)    10d

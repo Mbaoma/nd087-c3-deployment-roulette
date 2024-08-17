@@ -1,0 +1,43 @@
+Curling the service 10 times...
+<html>
+<h1>This is version 2</h1>
+</html>
+
+<html>
+<h1>This is version 2</h1>
+</html>
+
+<html>
+<h1>This is version 2</h1>
+</html>
+
+<html>
+<h1>This is version 1</h1>
+</html>
+
+<html>
+<h1>This is version 2</h1>
+</html>
+
+<html>
+<h1>This is version 1</h1>
+</html>
+
+<html>
+<h1>This is version 1</h1>
+</html>
+
+<html>
+<h1>This is version 2</h1>
+</html>
+
+<html>
+<h1>This is version 2</h1>
+</html>
+
+<html>
+<h1>This is version 2</h1>
+</html>
+
+Checking if both versions are returning results...
+Traffic splitting is not working as expected.

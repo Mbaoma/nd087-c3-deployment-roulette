@@ -6,7 +6,7 @@ metadata:
   name: canary-v1
   namespace: udacity
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: canary
