@@ -7,7 +7,7 @@ spec:
   type: LoadBalancer 
   selector:
     app: canary
-    # version: "1.0"
+    version: "1.0"
   ports:
     - protocol: TCP
       port: 80

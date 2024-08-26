@@ -29,17 +29,3 @@ spec:
         - name: configmap-vol
           configMap:
             name: blue-config
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: blue-service
-  namespace: udacity
-spec:
-  selector:
-    app: blue
-  ports:
-    - protocol: TCP
-      port: 80        # The port that the service will expose
-      targetPort: 80  # The port on the pod that the service will forward traffic to
-  type: LoadBalancer  # This will expose the service externally

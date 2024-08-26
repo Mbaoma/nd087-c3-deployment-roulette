@@ -1,0 +1,35 @@
+In the ```canary-svc.yaml```, I commented out the ```label```.
+from
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: canary-svc
+  namespace: udacity
+spec:
+  type: LoadBalancer 
+  selector:
+    app: canary
+    version: "1.0"
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+```
+
+to
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: canary-svc
+  namespace: udacity
+spec:
+  type: LoadBalancer 
+  selector:
+    app: canary
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+```
