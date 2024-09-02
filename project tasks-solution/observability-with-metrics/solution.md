@@ -7,5 +7,4 @@ kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/late
 I identified the service using most memory by running
 ```
 kubectl top pods --all-namespaces > before_metrics.txt
-cat before_metrics.txt
 ```
