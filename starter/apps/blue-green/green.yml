@@ -29,3 +29,47 @@ spec:
         - name: configmap-vol
           configMap:
             name: green-config
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: green-service
+  namespace: udacity
+spec:
+  selector:
+    app: green  # This must match the label in your deployment
+  ports:
+    - protocol: TCP
+      port: 80        # Expose this port
+      targetPort: 80  # Map to the container port
+  type: LoadBalancer   # You can also use NodePort or LoadBalancer depending on your requirements
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: blue-green-ingress
+  namespace: udacity
+  annotations:
+    nginx.ingress.kubernetes.io/canary: "true"
+    nginx.ingress.kubernetes.io/canary-weight: "50"   # This defines the weight of the canary (blue in this case)
+spec:
+  rules:
+    - host: blue-green.udacityproject.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: green-service    # Main service
+                port:
+                  number: 80
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: blue-service    # Canary service
+                port:
+                  number: 80
